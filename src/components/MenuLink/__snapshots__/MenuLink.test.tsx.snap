@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuLink /> should render open in a blank 1`] = `
+.c0 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+  color: #ffffff;
+  border-right: 0.5rem solid #000000;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.c0:hover {
+  border-right: 0.5rem solid #dc143c;
+  color: #dc143c;
+}
+
+<div>
+  <a
+    class="c0"
+    href="http://localhost"
+    target="_self"
+  >
+    Children
+  </a>
+</div>
+`;

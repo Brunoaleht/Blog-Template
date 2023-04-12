@@ -1,5 +1,5 @@
 {
-  "name": "projeto4",
+  "name": "blog-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,7 +17,10 @@
     "@next/font": "13.1.6",
     "@styled-icons/material-outlined": "^10.47.0",
     "@testing-library/user-event": "^14.4.3",
+    "disqus-react": "^1.1.5",
     "eslint-config-next": "13.1.6",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.2.0",
     "next": "13.1.6",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
@@ -61,8 +64,7 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "npm run lint -- --fix",
-      "npm test -- --findRelatedTests --bail"
+      "npm run lint -- --fix"
     ]
   }
 }

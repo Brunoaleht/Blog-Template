@@ -1,10 +1,10 @@
 import { GlobalStyles } from '../src/styles/global-styles';
 import { theme } from '../src/styles/theme';
-import { ThemeProvider } from "styled-components";
+import { BlogThemeProvider } from '../src/contexts/BlogThemeContext';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  backgrounds:{
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  backgrounds: {
     default: 'light',
     values: [
       {
@@ -13,9 +13,9 @@ export const parameters = {
       },
       {
         name: 'dark',
-        value: theme.colors.primaryColor,
+        value: theme.colors.primary,
       },
-    ]
+    ],
   },
   controls: {
     matchers: {
@@ -27,9 +27,9 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme} >
+    <BlogThemeProvider>
       <Story />
       <GlobalStyles />
-    </ThemeProvider>
-  )
+    </BlogThemeProvider>
+  ),
 ];
