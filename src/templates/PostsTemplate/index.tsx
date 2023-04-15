@@ -13,7 +13,7 @@ export type PostsTemplateProps = {
 };
 
 export const PostsTemplate = ({ setting, posts, variable }: PostsTemplateProps) => {
-  const [statePosts, setStatePosts] = useState(posts);
+  const [statePostsData, setStatePostsData] = useState(posts.postData);
   const [stateVariable, setStateVariable] = useState(variable);
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [noMorePosts, setNoMorePosts] = useState(false);
@@ -30,16 +30,14 @@ export const PostsTemplate = ({ setting, posts, variable }: PostsTemplateProps) 
       setNoMorePosts(true);
       return;
     }
-    const newPostsData = [...posts.postData, ...morePosts.posts.postData];
-    const newPosts = { postData: newPostsData };
     setBtnDisabled(false);
     setStateVariable(newVariable);
-    setStatePosts(newPosts);
+    setStatePostsData((p) => [...p, ...morePosts.posts.postData]);
   };
   return (
     <Base setting={setting}>
-      <PostGrid postData={statePosts.postData} />
-      {statePosts.postData && statePosts.postData.length ? (
+      <PostGrid postData={statePostsData} />
+      {statePostsData && statePostsData.length ? (
         <Styled.ButtonContainer>
           <Styled.Button onClick={handleLoadMorePosts} disabled={btnDisabled}>
             {noMorePosts ? 'Sem Mais Posts' : 'Carregar Posts'}

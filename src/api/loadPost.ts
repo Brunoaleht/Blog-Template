@@ -14,9 +14,9 @@ export type LoadPostVariable = {
   tagsSlug?: { eq: string };
 };
 export const defaultLoadPostsVariables = {
+  sort: 'createdAt:desc',
   start: 0,
   limit: 1,
-  sort: 'createdAt:desc',
 };
 
 export const loadPost = async (variables: LoadPostVariable = {}): Promise<PostsTemplateProps> => {
