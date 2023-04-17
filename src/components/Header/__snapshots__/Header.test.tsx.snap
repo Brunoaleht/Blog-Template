@@ -22,7 +22,7 @@ exports[`<Header /> should match snapshot 1`] = `
   color: inherit;
 }
 
-.c3 > img {
+.c3 img {
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
@@ -41,8 +41,6 @@ exports[`<Header /> should match snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-right: 3.2rem;
-  padding-left: 3.2rem;
   padding-bottom: 5.6rem;
   width: 100%;
   max-width: 96rem;
@@ -71,6 +69,28 @@ exports[`<Header /> should match snapshot 1`] = `
   margin-top: 0;
 }
 
+@media (max-width:400px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+
+  .c0 > .c1 {
+    margin: 0 0 2.4rem 0;
+  }
+}
+
+@media (max-width:400px) {
+  .c4 {
+    margin-left: 0;
+  }
+}
+
 <div>
   <header
     class="c0"
@@ -80,16 +100,16 @@ exports[`<Header /> should match snapshot 1`] = `
     >
       <a
         href="/"
+        target="_self"
       >
-        <a
+        <div
           class="c3"
-          target="_self"
         >
           <img
             alt="Bruno Alexandre - Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus doloremque nulla eius aperiam modi error facere, commodi."
-            src="assets/images/I-am.jfif"
+            src="https://res.cloudinary.com/dxldesniw/image/upload/v1677869914/logo1_6dca30fa4b.png"
           />
-        </a>
+        </div>
       </a>
     </h1>
     <div

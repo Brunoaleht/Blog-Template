@@ -7,7 +7,6 @@ export const Container = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: ${theme.spacings.large};
     a {
       color: inherit;
       text-decoration: none;

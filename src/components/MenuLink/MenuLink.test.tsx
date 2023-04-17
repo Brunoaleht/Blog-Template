@@ -7,6 +7,10 @@ describe('<MenuLink />', () => {
     renderTheme(<MenuLink link="http://localhost" text="Children" />);
     expect(screen.getByRole('link', { name: 'Children' })).toHaveAttribute('target', '_self');
   });
+  it('should render a link is link next', () => {
+    renderTheme(<MenuLink link="/home" text="Children" />);
+    expect(screen.getByRole('link', { name: 'Children' })).toHaveAttribute('target', '_self');
+  });
 
   it('should render open in a new tab', () => {
     renderTheme(<MenuLink link="http://localhost" text="Children" newTab={true} />);
@@ -14,7 +18,7 @@ describe('<MenuLink />', () => {
   });
 
   it('should render open in a blank', () => {
-    const { container } = renderTheme(<MenuLink link="http://localhost" text="Children" newTab={false} />);
+    const { container } = renderTheme(<MenuLink link="http://localhost" text="Children" newTab={true} />);
     expect(container).toMatchSnapshot();
   });
 });

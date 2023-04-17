@@ -12,7 +12,7 @@ export default {
   menuLink: [
     {
       id: '1',
-      link: '#about',
+      link: '/about',
       text: 'About',
       newTab: false,
     },

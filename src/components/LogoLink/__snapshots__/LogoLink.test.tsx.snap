@@ -15,7 +15,7 @@ exports[`<LogoLink /> should match snapshot 1`] = `
   color: inherit;
 }
 
-.c1 > img {
+.c1 img {
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
@@ -36,10 +36,7 @@ exports[`<LogoLink /> should match snapshot 1`] = `
     href="#target"
     target="_self"
   >
-    <img
-      alt="Olá mundo"
-      src="image.jpg"
-    />
+    Olá mundo
   </a>
 </h1>
 `;

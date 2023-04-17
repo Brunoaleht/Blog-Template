@@ -15,7 +15,7 @@ exports[`<Menu /> should match snapshot 1`] = `
   color: inherit;
 }
 
-.c7 > img {
+.c7 img {
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
@@ -26,6 +26,23 @@ exports[`<Menu /> should match snapshot 1`] = `
   line-height: 1.2;
   font-size: 2.4rem;
   text-transform: uppercase;
+}
+
+.c10 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+  color: #ffffff;
+  border-right: 0.5rem solid #000000;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.c10:hover {
+  border-right: 0.5rem solid #dc143c;
+  color: #dc143c;
 }
 
 .c9 {
@@ -180,16 +197,16 @@ exports[`<Menu /> should match snapshot 1`] = `
         >
           <a
             href="/"
+            target="_self"
           >
-            <a
+            <div
               class="c7"
-              target="_self"
             >
               <img
                 alt="Logo"
-                src="assets/images/I-am.jfif"
+                src="https://res.cloudinary.com/dxldesniw/image/upload/v1677869914/logo1_6dca30fa4b.png"
               />
-            </a>
+            </div>
           </a>
         </h1>
       </div>
@@ -200,18 +217,22 @@ exports[`<Menu /> should match snapshot 1`] = `
           class=""
         >
           <a
-            class="c9"
-            href="#about"
+            href="/about"
+            style="text-decoration: none;"
             target="_self"
           >
-            About
+            <div
+              class="c9"
+            >
+              About
+            </div>
           </a>
         </li>
         <li
           class=""
         >
           <a
-            class="c9"
+            class="c10"
             href="#skills"
             target="_self"
           >
@@ -222,7 +243,7 @@ exports[`<Menu /> should match snapshot 1`] = `
           class=""
         >
           <a
-            class="c9"
+            class="c10"
             href="#contact"
             target="_self"
           >

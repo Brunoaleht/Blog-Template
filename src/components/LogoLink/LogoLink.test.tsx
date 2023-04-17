@@ -1,6 +1,9 @@
 import { screen } from '@testing-library/react';
 import { renderTheme } from '../../styles/render-theme';
-import { LogoLink } from '.';
+import { LogoLink, LogoLinkProps } from '.';
+import mock from './mock';
+
+const props: LogoLinkProps = mock;
 
 describe('<LogoLink />', () => {
   it('should render text logo', () => {
@@ -10,8 +13,13 @@ describe('<LogoLink />', () => {
   });
 
   it('should render image logo', () => {
-    renderTheme(<LogoLink link="#target" text="Olá mundo" imgUrl="image.jpg" />);
-    expect(screen.getByAltText('Olá mundo')).toHaveAttribute('src', 'image.jpg');
+    renderTheme(<LogoLink link="#target" text="Olá mundo" imgUrl="image.jpg" logo={props.logo} />);
+    expect(screen.getByRole('img')).toHaveAttribute('src', props.logo.logoData.attributes.url);
+  });
+  it('should render image logo and newTab True', () => {
+    renderTheme(<LogoLink link="#target" text="Olá mundo" imgUrl="image.jpg" newTab={true} logo={props.logo} />);
+    expect(screen.getByRole('link')).toHaveAttribute('target', '_blank');
+    expect(screen.getByRole('img')).toHaveAttribute('src', props.logo.logoData.attributes.url);
   });
 
   it('should match snapshot', () => {

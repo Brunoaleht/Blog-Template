@@ -14,8 +14,8 @@ export const MenuLink = ({ text, link, newTab = false }: MenuLinkProps) => {
 
   if (nextLink) {
     return (
-      <Link href={link} passHref>
-        <Styled.Container target={target}>{text}</Styled.Container>
+      <Link href={link} target={target} style={{ textDecoration: 'none' }}>
+        <Styled.NextLinkContainer>{text}</Styled.NextLinkContainer>
       </Link>
     );
   }

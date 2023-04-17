@@ -21,7 +21,7 @@ exports[`<PostGrid /> should match snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 0 10px rgb(0,0,0,0.2);
   border-radius: 8px;
   padding: 1rem;

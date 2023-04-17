@@ -9,7 +9,10 @@ describe('<Header />', () => {
     renderTheme(<Header {...props} showText={undefined} />);
 
     expect(screen.getByRole('heading', { name: props.blogName })).toBeInTheDocument();
-    expect(screen.getByRole('img', { name: /Bruno Alexandre/i })).toHaveAttribute('src', props.logo);
+    expect(screen.getByRole('img', { name: /Bruno Alexandre/i })).toHaveAttribute(
+      'src',
+      props.logo.logoData.attributes.url,
+    );
     expect(screen.getByText(props.blogDescription)).toBeInTheDocument();
   });
 
@@ -17,7 +20,10 @@ describe('<Header />', () => {
     renderTheme(<Header {...props} showText={false} />);
 
     expect(screen.queryByRole('heading', { name: 'Bruno Alexandre' })).not.toBeInTheDocument();
-    expect(screen.getByRole('img', { name: /Bruno Alexandre/i })).toHaveAttribute('src', props.logo);
+    expect(screen.getByRole('img', { name: /Bruno Alexandre/i })).toHaveAttribute(
+      'src',
+      props.logo.logoData.attributes.url,
+    );
     expect(screen.queryByRole(props.blogDescription)).not.toBeInTheDocument();
   });
 
