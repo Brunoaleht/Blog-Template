@@ -16,7 +16,7 @@ export type LoadPostVariable = {
 export const defaultLoadPostsVariables = {
   sort: 'createdAt:desc',
   start: 0,
-  limit: 1,
+  limit: 3,
 };
 
 export const loadPost = async (variables: LoadPostVariable = {}): Promise<PostsTemplateProps> => {
