@@ -2,9 +2,6 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    iframe[src*='ads'] {
-      display: none;
-    }
     font-size: 2rem;
     blockquote {
       border-left: 0.5rem solid ${theme.colors.secondary};
