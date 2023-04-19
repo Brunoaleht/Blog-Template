@@ -21,7 +21,11 @@ export const GRAPHQL_QUERY = gql`
       pagination: { start: $start, limit: $limit }
       filters: {
         slug: $slug
-        title: { containsi: $postSearch }
+        or: [
+          { title: { containsi: $postSearch } }
+          { content: { containsi: $postSearch } }
+          { excerpt: { containsi: $postSearch } }
+        ]
         author: { slug: $authorSlug }
         categories: { slug: $categorySlug }
         tags: { slug: $tagsSlug }

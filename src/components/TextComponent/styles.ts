@@ -2,6 +2,9 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
+    iframe[src*='ads'] {
+      display: none;
+    }
     font-size: 2rem;
     blockquote {
       border-left: 0.5rem solid ${theme.colors.secondary};
@@ -11,7 +14,7 @@ export const Container = styled.div`
       font-style: italic;
       margin: ${theme.spacings.medium};
     }
-    code {
+    /* code {
       font-family: monospace;
       color: ${theme.colors.secondary};
       font-size: ${theme.fonts.sizes.small};
@@ -36,7 +39,7 @@ export const Container = styled.div`
       background: ${theme.colors.primary};
       color: ${theme.colors.white};
       padding: ${theme.spacings.medium};
-    }
+    } */
     a,
     a:visited,
     a:link {

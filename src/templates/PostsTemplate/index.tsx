@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { LoadPostVariable, loadPost } from '../../api/loadPost';
 import { PostGrid } from '../../components/PostGrid';
 import { Posts } from '../../shared-types/Posts';
@@ -17,6 +17,13 @@ export const PostsTemplate = ({ setting, posts, variable }: PostsTemplateProps) 
   const [stateVariable, setStateVariable] = useState(variable);
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [noMorePosts, setNoMorePosts] = useState(false);
+
+  useEffect(() => {
+    setStatePostsData(posts.postData);
+    setNoMorePosts(false);
+    setBtnDisabled(false);
+    setStateVariable(variable);
+  }, [posts.postData, variable]);
   const handleLoadMorePosts = async () => {
     setBtnDisabled(true);
 
