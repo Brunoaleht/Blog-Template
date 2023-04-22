@@ -4,4 +4,5 @@ export default {
   defaultSlug: 'my-page',
   url: 'https://strapi-landing-pages-yiw6.onrender.com/api',
   graphqlURL: 'https://strapi-blog-w8xt.onrender.com/graphql',
+  // graphqlURL: 'http://localhost:1337/graphql',
 };
